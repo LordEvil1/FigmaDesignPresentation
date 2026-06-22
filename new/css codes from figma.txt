@@ -1,0 +1,212 @@
+/* Frame 1 */
+
+position: relative;
+width: 1440px;
+height: 1024px;
+
+background: #FFFFFF;
+
+
+/* Frame 2 */
+
+position: relative;
+width: 1440px;
+height: 1024px;
+
+background: #FFFFFF;
+
+
+/* Frame 3 */
+
+position: relative;
+width: 1440px;
+height: 1024px;
+
+background: #FFFFFF;
+
+
+/* Frame 5 */
+
+position: relative;
+width: 1440px;
+height: 1024px;
+
+background: #FFFFFF;
+
+
+/* Frame 7 */
+
+position: relative;
+width: 1440px;
+height: 1024px;
+
+background: #FFFFFF;
+
+
+/* Frame 6 */
+
+position: relative;
+width: 1440px;
+height: 1024px;
+
+background: #FFFFFF;
+
+
+/* Frame 10 */
+
+position: relative;
+width: 1440px;
+height: 1024px;
+
+background: #FFFFFF;
+
+
+/* Frame 8 */
+
+position: relative;
+width: 1440px;
+height: 1024px;
+
+background: #FFFFFF;
+
+
+/* Frame 22 */
+
+position: relative;
+width: 1440px;
+height: 1024px;
+
+background: #FFFFFF;
+
+
+/* Frame 27 */
+
+position: relative;
+width: 1440px;
+height: 1024px;
+
+background: #FFFFFF;
+
+
+/* Frame 24 */
+
+position: relative;
+width: 1440px;
+height: 1024px;
+
+background: #FFFFFF;
+
+
+/* Frame 30 */
+
+position: relative;
+width: 1440px;
+height: 1024px;
+
+background: #FFFFFF;
+
+
+/* Frame 31 */
+
+position: relative;
+width: 1440px;
+height: 1024px;
+
+background: #FFFFFF;
+
+
+/* Frame 32 */
+
+position: relative;
+width: 1440px;
+height: 1024px;
+
+background: #FFFFFF;
+
+
+/* Frame 21 */
+
+position: relative;
+width: 1440px;
+height: 1024px;
+
+background: #FFFFFF;
+
+
+/* Frame 20 */
+
+position: relative;
+width: 1440px;
+height: 1024px;
+
+background: #FFFFFF;
+
+
+/* Frame 19 */
+
+position: relative;
+width: 1440px;
+height: 1024px;
+
+background: #FFFFFF;
+
+
+/* Frame 4 */
+
+position: relative;
+width: 1440px;
+height: 1024px;
+
+background: #FFFFFF;
+
+
+/* Group 13 */
+
+position: absolute;
+width: 343px;
+height: 344px;
+
+
+
+/* Group 12 */
+
+position: absolute;
+width: 358px;
+height: 353px;
+
+
+
+/* Group 14 */
+
+position: absolute;
+width: 335px;
+height: 345px;
+
+
+
+/* Group 27 */
+
+position: absolute;
+width: 92px;
+height: 92px;
+
+
+
+/* 7e02c2c72ff6f9c95870ae40928ad62134e0352d_1740465932 1 */
+
+position: absolute;
+width: 82px;
+height: 82px;
+
+background: url(7e02c2c72ff6f9c95870ae40928ad62134e0352d_1740465932);
+border-radius: 400px;
+
+
+/* affb632701a2de5a6308ae946023839c290dbb04_1763311275 1 */
+
+position: absolute;
+width: 559px;
+height: 559px;
+
+background: url(affb632701a2de5a6308ae946023839c290dbb04_1763311275.png);
+border-radius: 144px;
