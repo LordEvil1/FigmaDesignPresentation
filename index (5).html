@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8" />
@@ -17,56 +17,205 @@ html, body {
   position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url('550ParentPage.png');
-  background-size: 100% 100%;
+  background-image: url('pasabi.png');
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
 }
 
-/* home icon – 2nd icon in header nav */
-.btn-home {
+/* HEADER */
+.header {
+  position: relative;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.header .hdr-img {
+  width: 100%;
+  height: 150px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.header .logo {
   position: absolute;
-  left: 29%;
-  top: 3.5%;
-  width: 5%;
-  height: 9%;
+  top: 10px;
+  left: 20px;
+  height: 120px;
+  object-fit: contain;
+}
+
+.header-icons {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  direction: ltr;
+}
+
+.header-icons a,
+.header-icons img {
+  display: block;
+  height: 38px;
+  width: auto;
+  object-fit: contain;
   cursor: pointer;
 }
 
-/* clickable area over each product card */
-.btn-556 {
+/* MAIN */
+.main-area {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.back-btn {
   position: absolute;
-  left: 2%;
-  top: 24%;
-  width: 31%;
-  height: 55%;
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 60px;
+  object-fit: contain;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.product-grid {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  max-width: 90vw;
+}
+
+.product-grid a {
+  display: block;
   cursor: pointer;
 }
 
-.btn-555 {
-  position: absolute;
-  left: 34%;
-  top: 24%;
-  width: 32%;
-  height: 55%;
+.product-grid img {
+  height: 300px;
+  width: auto;
+  max-width: 28vw;
+  object-fit: contain;
+  display: block;
+}
+
+/* PRODUCTS DROPDOWN */
+.products-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.products-dropdown > img {
+  display: block;
+  height: 38px;
+  width: auto;
+  object-fit: contain;
   cursor: pointer;
 }
 
-.btn-557 {
+.dropdown-menu {
+  display: none;
   position: absolute;
-  left: 67%;
-  top: 24%;
-  width: 30%;
-  height: 55%;
-  cursor: pointer;
+  top: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255,255,255,0.97);
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.18);
+  min-width: 130px;
+  z-index: 200;
+  overflow: hidden;
+}
+
+.products-dropdown:hover .dropdown-menu,
+.dropdown-menu.open {
+  display: block;
+}
+
+.dropdown-menu a {
+  display: block !important;
+  padding: 10px 18px !important;
+  color: #333 !important;
+  text-decoration: none !important;
+  font-family: 'Tahoma', Arial, sans-serif;
+  font-size: 14px !important;
+  height: auto !important;
+  width: auto !important;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.dropdown-menu a:last-child { border-bottom: none; }
+.dropdown-menu a:hover { background: #f0f5ff !important; color: #0055cc !important; }
+
+@media (max-width: 768px) {
+  .header .hdr-img { height: 85px; }
+  .header .logo { height: 65px; top: 5px; left: 10px; }
+  .header-icons { gap: 10px; }
+  .header-icons a, .header-icons img, .products-dropdown > img { height: 26px; }
+  .product-grid { gap: 10px; }
+  .product-grid img { height: 160px; max-width: 30vw; }
+  .back-btn { height: 40px; left: 10px; }
 }
 </style>
 </head>
 <body>
 <div class="page">
-  <a href="index.html" class="btn-home"></a>
-  <a href="557.html"       class="btn-556"></a>
-  <a href="556.html"       class="btn-555"></a>
-  <a href="555.html"       class="btn-557"></a>
+
+  <div class="header">
+    <img src="PagesHeader.png" alt="header" class="hdr-img" />
+    <img src="logo222.png" alt="logo" class="logo" />
+    <div class="header-icons">
+      <img src="SearchIcon.png" alt="search" />
+      <a href="index.html"><img src="HomeIcon.png" alt="home" /></a>
+      <div class="products-dropdown">
+        <img src="SeeProductsIcon.png" alt="products" id="productsBtn" />
+        <div class="dropdown-menu" id="dropdownMenu">
+          <a href="index (3).html">چادر</a>
+          <a href="index (4).html">صندلی</a>
+          <a href="index (6).html">باربیکیو</a>
+          <a href="index (5).html">لوازم شنا</a>
+        </div>
+      </div>
+      <img src="PurchaseBagIcon.png" alt="cart" />
+      <a href="index (2).html"><img src="AboutUsIcon.png" alt="about" /></a>
+    </div>
+  </div>
+
+  <div class="main-area">
+    <a href="index.html">
+      <img src="backButton.png" alt="back" class="back-btn" />
+    </a>
+    <div class="product-grid">
+      <a href="557.html"><img src="557.png" alt="ماسک و اسنورکل" /></a>
+      <a href="556.html"><img src="556.png" alt="حلقه شنا" /></a>
+      <a href="555.html"><img src="555.png" alt="میله شنا" /></a>
+    </div>
+  </div>
+
 </div>
+<script>
+  var btn = document.getElementById('productsBtn');
+  var menu = document.getElementById('dropdownMenu');
+  btn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    menu.classList.toggle('open');
+  });
+  document.addEventListener('click', function() {
+    menu.classList.remove('open');
+  });
+</script>
 </body>
 </html>

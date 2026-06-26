@@ -40,12 +40,38 @@ html, body {
   height: 6%;
   cursor: pointer;
 }
+
+.toggle-btn {
+  position: absolute;
+  bottom: 2%;
+  right: 16%;
+  width: 23%;
+  height: 22%;
+  cursor: pointer;
+  z-index: 10;
+  background: transparent;
+  border: none;
+}
 </style>
 </head>
 <body>
-<div class="page">
+<div class="page" id="page">
   <a href="index (5).html" class="btn-back"></a>
   <a href="index.html" class="btn-home"></a>
+  <button class="toggle-btn" id="toggleBtn" onclick="toggleImage()"></button>
 </div>
+
+<script>
+  var current = '556Page.png';
+  var images = {
+    '556Page.png': '556Page2.png',
+    '556Page2.png': '556Page.png'
+  };
+
+  function toggleImage() {
+    current = images[current];
+    document.getElementById('page').style.backgroundImage = "url('" + current + "')";
+  }
+</script>
 </body>
 </html>
