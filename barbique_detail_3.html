@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8" />
@@ -23,7 +23,6 @@ html, body {
   background-position: center;
 }
 
-/* transparent clickable area over the back button in the image */
 .btn-back {
   position: absolute;
   left: 1.5%;
@@ -33,7 +32,6 @@ html, body {
   cursor: pointer;
 }
 
-/* transparent clickable area over the home icon in the header nav */
 .btn-home {
   position: absolute;
   left: calc(40.5% - 10px);
@@ -54,22 +52,52 @@ html, body {
   background: transparent;
   border: none;
 }
+
+@media (max-width: 768px) {
+  .page {
+    background-image: url('images/bbq/BarbiqueProductIconAndDetatilWithANotherModelDetailPage-Mobile.png');
+  }
+  .btn-back {
+    left: 1.5%;
+    top: 3%;
+    width: 15%;
+    height: 12%;
+  }
+  .btn-home {
+    left: calc(58.5% - 10px);
+  }
+  .toggle-btn {
+    bottom: 72%;
+    right: 10%;
+    left: auto;
+    width: 35%;
+    height: 10%;
+  }
+}
 </style>
 </head>
 <body>
 <div class="page" id="page">
   <a href="index (6).html" class="btn-back"></a>
-  <a href="index.html"  class="btn-home"></a>
+  <a href="index.html" class="btn-home"></a>
   <button class="toggle-btn" onclick="toggleImage()"></button>
 </div>
 
 <script>
-  var images = [
+  var desktopImages = [
     'images/bbq/BarbiqueProductIconAndDetatilWithANotherModelDetailPage.png',
     'images/bbq/BarbiqueProductIconAndDetatilWithANotherModelDetailPage2.png'
   ];
+  var mobileImages = [
+    'images/bbq/BarbiqueProductIconAndDetatilWithANotherModelDetailPage-Mobile.png',
+    'images/bbq/BarbiqueProductIconAndDetatilWithANotherModelDetailPage2-Mobile.png'
+  ];
   var idx = 0;
+
+  function isMobile() { return window.matchMedia('(max-width: 768px)').matches; }
+
   function toggleImage() {
+    var images = isMobile() ? mobileImages : desktopImages;
     idx = (idx + 1) % images.length;
     document.getElementById('page').style.backgroundImage = "url('" + images[idx] + "')";
   }

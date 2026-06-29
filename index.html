@@ -159,14 +159,40 @@ html, body {
   object-fit: fill;
 }
 
+.mobile-nav-grid { display: none; }
+.mobile-about-btn { display: none; }
+
 @media (max-width: 768px) {
-  .header .hdr-img { height: 85px; }
-  .header .logo { height: 65px; top: 5px; left: 10px; }
-  .header-icons { gap: 10px; }
-  .header-icons a, .header-icons img, .products-dropdown > img { height: 26px; }
-  .bottom-strip { gap: 20px; padding: 8px 5px; }
-  .bottom-strip img { height: 60px; }
-  .footer img { height: 30px; }
+  .page {
+    background-image: url('images/home-Mobile.png');
+    background-size: 100% 100%;
+  }
+  .header, .bottom-strip, .footer { display: none; }
+  .mobile-nav-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    direction: ltr;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 52%;
+  }
+  .mobile-nav-grid a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .mobile-about-btn {
+    display: block;
+    position: absolute;
+    top: 0%;
+    right: 27%;
+    width: 12%;
+    height: 7%;
+    z-index: 10;
+  }
 }
 </style>
 </head>
@@ -202,6 +228,15 @@ html, body {
 
   <div class="footer">
     <img src="images/ui/putr.png" alt="footer" />
+  </div>
+
+  <a href="index (2).html" class="mobile-about-btn"></a>
+
+  <div class="mobile-nav-grid">
+    <a href="index (4).html"></a>
+    <a href="index (6).html"></a>
+    <a href="index (3).html"></a>
+    <a href="index (5).html"></a>
   </div>
 
 </div>

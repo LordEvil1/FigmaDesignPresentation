@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8" />
@@ -52,6 +52,28 @@ html, body {
   background: transparent;
   border: none;
 }
+
+@media (max-width: 768px) {
+  .page {
+    background-image: url('images/chair/Frame21-Mobile.png');
+  }
+  .btn-back {
+    left: 1.5%;
+    top: 3%;
+    width: 15%;
+    height: 12%;
+  }
+  .btn-home {
+    left: calc(58.5% - 10px);
+  }
+  .toggle-btn {
+    bottom: 72%;
+    right: 10%;
+    left: auto;
+    width: 35%;
+    height: 10%;
+  }
+}
 </style>
 </head>
 <body>
@@ -62,9 +84,14 @@ html, body {
 </div>
 
 <script>
-  var images = ['images/chair/Frame21.png', 'images/chair/Frame212.png', 'images/chair/Frame213.png'];
+  var desktopImages = ['images/chair/Frame21.png', 'images/chair/Frame212.png', 'images/chair/Frame213.png'];
+  var mobileImages  = ['images/chair/Frame21-Mobile.png', 'images/chair/Frame212-Mobile.png'];
   var idx = 0;
+
+  function isMobile() { return window.matchMedia('(max-width: 768px)').matches; }
+
   function toggleImage() {
+    var images = isMobile() ? mobileImages : desktopImages;
     idx = (idx + 1) % images.length;
     document.getElementById('page').style.backgroundImage = "url('" + images[idx] + "')";
   }
